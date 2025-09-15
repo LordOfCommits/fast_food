@@ -3,8 +3,7 @@ import useAuthStore from "@/store/auth.store";
 import { TabBarIconProps } from "@/type";
 import clsx from "clsx";
 import { Redirect, Tabs } from "expo-router";
-import { Image, Text } from "react-native";
-import { View } from "react-native";
+import { Image, Text, View } from "react-native";
 
 const TabBarIcon = ({ focused, icon, title }: TabBarIconProps) => (
   <View className="tab-icon">
