@@ -1,5 +1,3 @@
-import CustomButton from "@/components/CustomButton";
-import CustomInput from "@/components/CustomInput";
 import { images } from "@/constants";
 import { Slot } from "expo-router";
 import {
@@ -9,7 +7,6 @@ import {
   KeyboardAvoidingView,
   Platform,
   ScrollView,
-  Text,
   View,
 } from "react-native";
 

@@ -1,6 +1,7 @@
 import { images, offers } from "@/constants";
 import { Fragment } from "react";
 import {
+  Button,
   FlatList,
   Image,
   Pressable,
@@ -11,6 +12,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import cn from "clsx";
 import CartButton from "@/components/CartButton";
+import * as Sentry from "@sentry/react-native";
 
 export default function Index() {
   return (
