@@ -1,5 +1,7 @@
 import CartButton from "@/components/CartButton";
+import Filter from "@/components/Filter";
 import MenuCard from "@/components/MenuCard";
+import SearchBar from "@/components/SearchBar";
 import { getCategories, getMenu } from "@/lib/appwrite";
 import useAppwrite from "@/lib/useAppwrite";
 import { MenuItem } from "@/type";
@@ -28,9 +30,8 @@ const Search = () => {
   });
 
   useEffect(() => {
-    if (!category || !query) return;
-    refetch({ category, query, limit: 6 });
-  }, [category, query, refetch]);
+    refetch({ category: category ?? "", query: query ?? "", limit: 6 });
+  }, [category, query]);
   return (
     <SafeAreaView className="bg-white h-full">
       <FlatList
@@ -67,8 +68,8 @@ const Search = () => {
               </View>
               <CartButton />
             </View>
-            <Text>Search Input</Text>
-            <Text>Filter</Text>
+            <SearchBar />
+            <Filter categories={categories} />
           </View>
         )}
         ListEmptyComponent={() => !loading && <Text>No results</Text>}
